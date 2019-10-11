@@ -9,7 +9,7 @@ var classList = ['card-stats-1','card-stats-2','card-stats-3'],
     speed     = charState[1].firstChild.firstChild,
     cost      = charState[2].firstChild.firstChild,
     level     = document.getElementById('level'),
-    charName      = document.getElementById('name'); console.log(charName);
+    charName  = document.getElementById('name'); console.log(charName);
 
 //characters infos
 var chars  = [{
