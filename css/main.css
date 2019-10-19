@@ -60,7 +60,7 @@ i {
 }
 
 .slide {
-  display: none;
+/*   display: none; */
   float: right;
   z-index: 2;
   position: absolute;
