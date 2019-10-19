@@ -40,19 +40,24 @@ function showSlides(n, ...effects) {
   var i;
   var slides = document.getElementsByClassName("slide");
 
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-      var prevEff = [ slides[i].classList[1], slides[i].classList[2] ];
-      slides[i].classList = slides[i].className.
-                            replace(prevEff[0], '').
-                            replace(prevEff[1], '').
-                            replace(/\s+/, '');
-  }
+    // change imgs via css
+//   if (n > slides.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none";
+//       var prevEff = [ slides[i].classList[1], slides[i].classList[2] ];
+//       slides[i].classList = slides[i].className.
+//                             replace(prevEff[0], '').
+//                             replace(prevEff[1], '').
+//                             replace(/\s+/, '');
+//   }
 
-  slides[slideIndex-1].style.display = "block";
-  slides[slideIndex-1].className += ' ' + effects[0];
+//   slides[slideIndex-1].style.display = "block";
+//   slides[slideIndex-1].className += ' ' + effects[0];
+  if (n > 3){slideIndex = 1}
+  if ( n < 1){slideIndex = 3}
+  var img = slides.firstElementChild;
+  img.src = img.src.replace(/\d(?=.png)/, slideIndex); // change the name of pic (names are numbers: 1, 2, 3.png)  
   states.className = 'card-stats-' + slideIndex;
   states.children[1].className = 'card-color-' + slideIndex;
 
